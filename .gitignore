@@ -2,4 +2,4 @@
 .DS_STORE
 .cache
 build
-./**/solutions
+/**/solutions/
