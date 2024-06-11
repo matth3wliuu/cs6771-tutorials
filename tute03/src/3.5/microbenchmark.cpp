@@ -20,3 +20,13 @@ auto microbenchmark_lookup(int n_repetitions, int n_elems) -> timings {
 	(void)n_elems;
 	return {};
 }
+
+/*
+? What design and implementation trade-offs have been made between the various sequential
+? containers?
+
+? Has the programming-paradigm (i.e. OOP) of these datastructures made a difference?
+
+? Has modern hardware been fully taken advantage of?
+
+*/
