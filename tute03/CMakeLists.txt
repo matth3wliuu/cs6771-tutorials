@@ -48,11 +48,11 @@ set(CMAKE_CXX_FLAGS_RELWITHDEBINFO_INIT "-fsanitize=address,undefined")
 set(CMAKE_CXX_EXE_LINKER_FLAGS_DEBUG_INIT "-fsanitize=address,undefined")
 set(CMAKE_CXX_EXE_LINKER_FLAGS_RELWITHDEBINFO_INIT "-fsanitize=address,undefined")
 
-
 # add the testing library Catch2
 enable_testing()
 add_library(catch2_main lib/catch2_main.cpp)
 target_include_directories(catch2_main PUBLIC lib)
+
 # link the library so that other programs can get it
 link_libraries(catch2_main)
 
@@ -61,7 +61,6 @@ link_libraries(catch2_main)
 # ------------------------------------------------------------ #
 
 # 3.1
-
 add_library(sort_descending src/3.1/sort_descending.cpp)
 link_libraries(sort_descending)
 
@@ -69,7 +68,6 @@ add_executable(sort_descending_test src/3.1/sort_descending.test.cpp)
 add_test(sort_descending_test sort_descending_test)
 
 # 3.2
-
 add_library(vsort src/3.2/vsort.cpp)
 link_libraries(vsort)
 
@@ -77,7 +75,6 @@ add_executable(vsort_test src/3.2/vsort.test.cpp)
 add_test(vsort_test vsort_test)
 
 # 3.3
-
 add_library(stats src/3.3/stats.cpp)
 link_libraries(stats)
 
@@ -85,7 +82,6 @@ add_executable(stats_test src/3.3/stats.test.cpp)
 add_test(stats_test stats_test)
 
 # 3.4
-
 add_library(invert src/3.4/invert.cpp)
 link_libraries(invert)
 
@@ -93,11 +89,11 @@ add_executable(invert_test src/3.4/invert.test.cpp)
 add_test(invert_test invert_test)
 
 # 3.5
-
 add_library(microbenchmark src/3.5/microbenchmark.cpp)
 link_libraries(microbenchmark)
 
 add_executable(microbenchmark_test src/3.5/microbenchmark.test.cpp)
 add_test(microbenchmark_test microbenchmark_test)
 
-
+# 3.7
+add_library(iterator src/3.7/iterator.cpp)
