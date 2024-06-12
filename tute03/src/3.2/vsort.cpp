@@ -2,7 +2,7 @@
 
 auto vsort(std::vector<std::string>& vs) -> void {
     std::sort(vs.begin(), vs.end(), [] (const auto& lhs, const auto& rhs) {
-        auto is_vowel = [&x] (char ch) -> bool {
+        auto is_vowel = [] (char ch) -> bool {
             const auto lower = std::tolower(ch);
             return lower == 'a' or lower == 'e' or lower == 'i' or lower == 'o' or lower == 'u';
         };

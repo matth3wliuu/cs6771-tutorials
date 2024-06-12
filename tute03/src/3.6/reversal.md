@@ -29,7 +29,7 @@ Answer the following questions:
 
 1. Why is the for-loop marked with an (*) potentially more unsafe than the others?
 - a) It is a C-style for-loop, and the index could overflow.
-- b) It is a C-style for-loop, and the comparison of signed vs. unsigned integers can produce surprising results.
+**- b) It is a C-style for-loop, and the comparison of signed vs. unsigned integers can produce surprising results.**
 - c) It is a C-style for-loop, and this makes it inherently inferior to C++ style for-loops.
 - d) It is a C-style for-loop, and it is possible we go off the end of the `temperatures` vector.
 
@@ -37,10 +37,10 @@ Answer the following questions:
 - a) (*): Index calculations are easy to do and most people are used to seeing index-based reverse iteration
 - b) (^): range for-loops and an appropriate use of std::reverse conveys our intent the best.
 - c) (^): all standard library containers provide reverse iterators.
-- d) (&): just change the `cbegin` and `cend` to `rbegin` and `rend`.
+**- d) (&): just change the `cbegin` and `cend` to `rbegin` and `rend`.**
 
 3. What differences, if any, are there between `temperatures.begin()` and `temperatures.rend()`?
-- a) An end-iterator, whether from `end()` or `rend()` is "one-past-the-end", and so is never dereferenceable, unlike `begin()`.
+**- a) An end-iterator, whether from `end()` or `rend()` is "one-past-the-end", and so is never dereferenceable, unlike `begin()`.**
 - b) No difference: `begin()` == `rend()` since the beginning of a range is the end of its reversal.
 - c) The only difference is the type: `begin()` returns an `iterator` whereas `rend()` returns `reverse_iterator`. Everything else is the same.
 - d) `rend()` would only compare equal to `begin()` if `temperatures` was empty.

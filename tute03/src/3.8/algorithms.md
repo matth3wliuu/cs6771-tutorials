@@ -17,7 +17,7 @@ What standard algorithm can this code be replaced by?
 - a) std::get
 - b) std::find_if
 - c) std::search
-- d) std::find *
+**- d) std::find**
 
 2. Consider the code below:
 ```cpp
@@ -30,7 +30,7 @@ auto second(std::vector<int> &v, std::vector<int>::iterator new_first) {
 What standard algorithm can this be replaced by?
 - a) std::erase
 - b) std::shift_left
-- c) std::rotate
+**- c) std::rotate**
 - d) std::shift_right
 
 3. Consider the code below
@@ -58,6 +58,6 @@ auto third(std::span<float> floats) {
 ```
 What sequence of standard algorithms can this reasonably be replaced by?
 - a) std::copy -> std::min_element -> std::max_element
-- b) std::copy -> std::minmax_element *
+**- b) std::copy -> std::minmax_element**
 - c) std::vector iterator constructor -> std::min_element -> std::max_element
 - d) std::memcpy -> std::max_element -> std::min_element
