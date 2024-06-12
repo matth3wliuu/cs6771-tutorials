@@ -121,10 +121,12 @@ int main() {
 	}
 	std::cout << "\n";
 
-	for (auto iter = temperatures.cbegin(); iter != temperatures.cend(); ++iter) { // (&)
+	for (auto iter = temperatures.crbegin(); iter != temperatures.crend(); ++iter) { // (&)
 		std::cout << *iter << " ";
 	}
 	std::cout << "\n";
+
+	for (auto iter = temperatures.end())// Don't do this
 }
 ```
 

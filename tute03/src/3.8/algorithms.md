@@ -17,7 +17,7 @@ What standard algorithm can this code be replaced by?
 - a) std::get
 - b) std::find_if
 - c) std::search
-- d) std::find
+- d) std::find *
 
 2. Consider the code below:
 ```cpp
@@ -43,7 +43,9 @@ auto third(std::span<float> floats) {
 
   auto m = std::numeric_limits<float>::max();
   for (auto f : v) {
-    if (f < m) m = f;
+    if (f < m) {
+      m = f;
+    }
   }
 
   auto M = std::numeric_limits<float>::min();
@@ -56,6 +58,6 @@ auto third(std::span<float> floats) {
 ```
 What sequence of standard algorithms can this reasonably be replaced by?
 - a) std::copy -> std::min_element -> std::max_element
-- b) std::copy -> std::minmax_element
+- b) std::copy -> std::minmax_element *
 - c) std::vector iterator constructor -> std::min_element -> std::max_element
 - d) std::memcpy -> std::max_element -> std::min_element

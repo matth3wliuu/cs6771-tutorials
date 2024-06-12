@@ -12,7 +12,7 @@ auto main() -> int {
 		/*
 		   ? Q1: What iterator type and category is `iter`?
 		   - a) constant iterator / random-access
-		   - b) `const_iterator` / contiguous
+		   - b) `const_iterator` / contiguous *
 		   - c) constant `const_iterator` / contiguous
 		   - d) won't compile
 		*/
