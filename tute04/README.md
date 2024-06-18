@@ -40,27 +40,27 @@ namespace comp6773 {
 }
 
 int main() {
-    std::cout << i << std::endl;        
+    std::cout << i << std::endl;
     {
-        int i = 0;                      
-        std::cout << i << std::endl;    
+        int i = 0;
+        std::cout << i << std::endl;
 
-        using ::i;                      
-        std::cout << i << std::endl;    
+        using ::i;
+        std::cout << i << std::endl;
     }
 
-    comp6771::foo(i);                   
-    comp6772::foo(i);                   
+    comp6771::foo(i);
+    comp6772::foo(i);
 
-    using namespace comp6771;           
-    using namespace comp6772;           
+    using namespace comp6771;
+    using namespace comp6772;
 
-    foo(i);                                                                     
+    foo(i);
 
-    foo('c');                         
+    foo('c');
 
-    auto uc = comp6773::uchar{'c'};     
-    bar(uc);                            
+    auto uc = comp6773::uchar{'c'};
+    bar(uc);
 }
 ```
 
@@ -209,7 +209,7 @@ Is the `outer` class-type default-constructible or copyable and why?
 
 ## Q4.4. Construction Confusion
 
-Write the alternative which most accurately answers the questions below. 
+Write the alternative which most accurately answers the questions below.
 
 1. Consider the below code snippet:
 ```cpp
@@ -274,9 +274,9 @@ int main() {
 
     // should be an alias for std::vector.
     auto v = spaceland::vector{6771};
-    
+
     // name: earth, position from sun: 3
-    // a planet is a kind of 
+    // a planet is a kind of
     auto earth = spaceland::planet{"earth", 3};
 
     // should produce an object with the same type as the "earth" variable above.
@@ -407,3 +407,12 @@ None.
 Aside from the constructors, `vec3` is intended to be a plain data struct, so it is OK to access its data members directly.
 
 
+# Question order during tutorial
+- Q4.7
+- Q4.5
+- Q4.1
+- Q4.2
+- Q4.3
+- Q4.4 (Part 4 and 5)
+
+- Q4.6 If we have time

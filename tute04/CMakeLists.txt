@@ -48,11 +48,11 @@ set(CMAKE_CXX_FLAGS_RELWITHDEBINFO_INIT "-fsanitize=address,undefined")
 set(CMAKE_CXX_EXE_LINKER_FLAGS_DEBUG_INIT "-fsanitize=address,undefined")
 set(CMAKE_CXX_EXE_LINKER_FLAGS_RELWITHDEBINFO_INIT "-fsanitize=address,undefined")
 
-
 # add the testing library Catch2
 enable_testing()
 add_library(catch2_main lib/catch2_main.cpp)
 target_include_directories(catch2_main PUBLIC lib)
+
 # link the library so that other programs can get it
 link_libraries(catch2_main)
 
@@ -60,12 +60,13 @@ link_libraries(catch2_main)
 # -------------- DO NOT MODIFY ABOVE THIS LINE --------------- #
 # ------------------------------------------------------------ #
 
-# 4.5
+# 4.2
+add_executable(constructing_destruction src/4.2/object.cpp)
 
+# 4.5
 add_executable(namespaced src/4.5/namespaced.cpp)
 
 # 4.6
-
 add_library(ferrari src/4.6/ferrari.cpp)
 link_libraries(ferrari)
 
@@ -73,7 +74,6 @@ add_executable(ferrari_test src/4.6/ferrari.test.cpp)
 add_test(ferrari_test ferrari_test)
 
 # 4.7
-
 add_library(rational src/4.7/rational.cpp)
 link_libraries(rational)
 
@@ -81,7 +81,6 @@ add_executable(rational_test src/4.7/rational.test.cpp)
 add_test(rational_test rational_test)
 
 # 4.8
-
 add_library(vec3 src/4.8/vec3.cpp)
 link_libraries(vec3)
 

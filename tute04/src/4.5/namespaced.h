@@ -4,8 +4,8 @@
 #include <string>
 
 struct celestial_body {
-    std::string name;
-    int pos;
+	std::string name;
+	int pos;
 };
 
 // Hint: type aliases in modern C++ also use the "using" directive...
