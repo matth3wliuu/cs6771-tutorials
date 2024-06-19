@@ -3,7 +3,8 @@
 
 /*
     ? What is the purpose of an unnamed namespace
-
+    // Allows us to declare globe constants within this current file
+    // similar to `static` in C
 */
 namespace {
     auto i = 42;
@@ -43,7 +44,7 @@ int main() {
         int i = 0;
         std::cout << i << std::endl;
 
-        using ::i;
+        using ::i;  // This will bring the `i` from the anonymous namespace into scope (won't compile cause conflict)
         std::cout << i << std::endl;
     }
 
@@ -53,7 +54,7 @@ int main() {
     using namespace comp6771;
     using namespace comp6772;
 
-    foo(i);
+    foo(i); // call to foo is ambiguous (won't compile)
 
     foo('c');
 

@@ -134,7 +134,8 @@ struct point2i {
 ```
 Is this class-type default-constructible and why?
 - a) No: We need to opt-in to a default aggregate initialiser.
-- b) Yes: default aggreggate-initialisation would leave `x` and `y` uninitialised.
+
+**- b) Yes: default aggreggate-initialisation would leave `x` and `y` uninitialised.**
 - c) No: This is a C-style struct; it has no default constructor.
 - d) Yes: default aggregate-initialisation would set `x` and `y` to `0`.
 
@@ -150,7 +151,7 @@ private:
 ```
 Is this class-type default-constructible and why?
 - a) Yes: the compiler can automatically synthesise the default constructor if we don't provide one.
-- b) No: a user-provided constructor prevents automatic synthesis of a default constructor.
+**- b) No: a user-provided constructor prevents automatic synthesis of a default constructor.**
 - c) No: we have not provided an in-class member initialiser.
 - d) Yes: `int` itself has a default constructor, so `employee`'s default constructor simply delegates to `int`'s one.
 
@@ -165,7 +166,9 @@ struct point2i {
 };
 ```
 Is this class-type default-constructible and why?
-- a) No: the two provided constructors are ambiguous when called with 0 arguments, so this code won't compile.
+
+**- a) No: the two provided constructors are ambiguous when called with 0 arguments, so this code won't compile.**
+
 - b) Yes: we have explicitly defaulted the default constructor.
 - c) Yes: Though both constructors can be called with 0 arguments, the compiler prefers the explicitly defaulted default-constructor.
 - d) Yes: Though both constructors can be called with 0 arguments, in overload resolution the second constructor has higher priority, so it will be called.

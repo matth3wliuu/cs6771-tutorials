@@ -34,7 +34,7 @@ namespace part_three {
 	};
 
 	// ? Will this compile
-	// [[maybe_unused]] const auto p = point2i();
+	[[maybe_unused]] const auto p = point2i();
 
 } // namespace part_three
 
