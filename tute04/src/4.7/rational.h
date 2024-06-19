@@ -16,6 +16,7 @@ public:
 		return {};
 	}
 
+	// * Note: we will see how to overload operators like (+, /, ...) soon
 	friend auto add(const rational_number& lhs, const rational_number& rhs) -> rational_number {
 		(void)lhs;
 		(void)rhs;
