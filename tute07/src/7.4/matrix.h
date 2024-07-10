@@ -23,9 +23,20 @@ public:
 
 	friend auto operator==(const matrix& a, const matrix& b) -> bool;
 
-	auto dimensions() const noexcept -> std::pair<std::size_t, std::size_t>;
+	auto dimensions() const -> std::pair<std::size_t, std::size_t>;
 
-	auto data() const noexcept -> const int*;
+	auto data() const -> const int*;
+
+private:
+	auto length() const -> std::size_t;
+
+	// ! Helper functions to make life easy
+	int* begin();
+	int* end();
+	const int* begin() const;
+	const int* end() const;
+
+	// TODO: Add data members
 };
 
 #endif // COMP6771_MATRIX_H
