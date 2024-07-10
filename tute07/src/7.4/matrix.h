@@ -2,6 +2,7 @@
 #define COMP6771_MATRIX_H
 
 #include <initializer_list>
+#include <memory>
 #include <utility>
 class matrix {
 public:
@@ -36,7 +37,9 @@ private:
 	const int* begin() const;
 	const int* end() const;
 
-	// TODO: Add data members
+	std::unique_ptr<int[]> data_;
+	std::size_t n_rows_;
+	std::size_t n_cols_;
 };
 
 #endif // COMP6771_MATRIX_H
