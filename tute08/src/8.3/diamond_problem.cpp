@@ -3,9 +3,9 @@ struct A {
 	auto show() -> void;
 };
 
-struct B : public A {};
+struct B : public virtual A {};
 
-struct C : public A {};
+struct C : public virtual A {};
 
 // clang-format off
 struct D : public B, public C {
@@ -13,8 +13,8 @@ struct D : public B, public C {
 // clang-format on
 
 auto main() -> int {
-	// auto d = D();
-	// d.show();
+	auto d = D();
+	d.show();
 }
 
 /*
