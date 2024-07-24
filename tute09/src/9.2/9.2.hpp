@@ -1,7 +1,6 @@
 #ifndef A2ED8F36_5FFB_42F8_A541_B0983ECDD0DF
 #define A2ED8F36_5FFB_42F8_A541_B0983ECDD0DF
 
-#include <optional>
 #include <type_traits>
 
 template<typename... Ts>
