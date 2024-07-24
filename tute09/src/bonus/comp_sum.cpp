@@ -2,7 +2,11 @@
 #include <type_traits>
 
 auto main() -> int {
+	// using x = my_sum<Zero, Two>::result;
+
 	// using OnePlusZero = my_sum<One, Zero>::result;
+
+	// using x = my_sum<Two, One>::result;
 
 	// static_assert(std::is_same_v<OnePlusZero, One>);
 

@@ -6,7 +6,8 @@
 #include <iterator>
 #include <stdexcept>
 
-/* TODO: fill in here */
+// N here refers to the maximum capacity of the ring
+template<typename T, std::size_t N>
 class ring {
 public:
 	template<typename InputIt>
@@ -57,7 +58,10 @@ private:
 		size_--;
 	}
 
-	/* TODO: Fill in here */
+	std::size_t head_;
+	std::size_t tail_;
+	std::size_t size_ = 0;
+	T elems_[N];
 };
 
 /*
@@ -66,4 +70,9 @@ private:
  *
  */
 
+template<typename T, typename... Ts>
+ring(T, Ts...) -> ring<T, sizeof...(Ts) + 1>;
+
+// template <typename T, typename ...Ts>
+// ring(T, Ts...) -> ring<T, sizeof...(Ts) + 1>;
 #endif // COMP6771_RING_H
