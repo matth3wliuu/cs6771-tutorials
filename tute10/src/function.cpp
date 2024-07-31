@@ -33,7 +33,7 @@ auto main() -> int {
 	// normal_exmples();
 
 	// auto ctad_examples = []() {
-	// 	auto func4 = Function(func);
+	// 	auto func4 = Function(func);·
 	// 	std::cout << func4(2.0, 1, std::string("matt")) << std::endl;
 
 	// 	auto fun7 = Function([](int, double) -> std::string { return std::string("hello"); });
