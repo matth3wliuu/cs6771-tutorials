@@ -124,10 +124,10 @@ Part i) Implement a deduction guide that will allow users to construct a `Functi
 Part ii) As of C++17, the standard specifies 2 deduction guides for `std::function`
 
 ```C++
-template< class R, class... ArgTypes >
+template<typename R, typename... ArgTypes >
 function(R(*)(ArgTypes...)) -> function<R(ArgTypes...)>;
 
-template<typename F >
+template<typename F>
 function(F) -> std::function<R(A...)>; /* see below */
 ```
 
