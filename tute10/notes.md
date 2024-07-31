@@ -2,7 +2,7 @@
 
 ### Background
 
-The `std::function` utility from the C++ standard library is an abstraction over callable objects. As such, instances of `std::function` can store, copy and invoke objects like lambda expressions, bind expressions, pointers to member functions, etc...
+The `std::function` utility from the C++ standard library is an abstraction over callable objects. As such, instances of `std::function` can store, copy and invoke callable objects like lambda expressions, bind expressions, pointers to member functions, etc...
 
 Some examples include:
 ```C++

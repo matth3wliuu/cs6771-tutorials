@@ -28,8 +28,6 @@ auto main() -> int {
 	// 	auto fun5 = Function<void()>([&local_str]() { std::cout << local_str << std::endl; });
 	// 	fun5();
 
-	// 	auto fun6 = Function(fun1);
-	// 	std::cout << fun6(40, 2) << std::endl;
 	// };
 
 	// normal_exmples();
